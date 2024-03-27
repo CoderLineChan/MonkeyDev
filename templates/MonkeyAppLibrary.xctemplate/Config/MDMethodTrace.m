@@ -916,7 +916,7 @@ typedef NS_ENUM(NSUInteger, MDTraceSource) {
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Entry
 
-static __attribute__((constructor)) void entry()
+static __attribute__((constructor)) void entry(void)
 {
     NSDictionary *config = [[MDConfigManager sharedInstance] readConfigByKey:MDCONFIG_TRACE_KEY];
     [[MDMethodTrace sharedInstance] parseConfig:config];

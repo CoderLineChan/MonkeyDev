@@ -58,3 +58,28 @@
 }
 
 %end
+
+
+// 
+// 去掉注释可去除应用BundleId校验
+// 替换“逆向App Bundle id”
+
+//%hook NSBundle
+//- (NSString *)bundleIdentifier{
+//    NSString *str =  @"逆向App Bundle ID";
+//    NSArray *address = [NSThread callStackReturnAddresses];
+//    NSDictionary *dic = [[NSBundle mainBundle]infoDictionary];
+//    [dic setValue:@"逆向App Bundle ID" forKey:@"CFBundleIdentifier"];
+//    Dl_info info = {0};
+//    if(dladdr((void *)[address[2] longLongValue], &info) == 0) return %orig;
+//    NSString *path = [NSString stringWithUTF8String:info.dli_fname];
+//    if ([path hasPrefix:NSBundle.mainBundle.bundlePath]) {
+//            NSLog(@"!!!!!!!!!!!!!");
+//            return str;
+//    } else {
+//        //  二进制是系统或者越狱插件
+//            NSLog(@"!!!!!!系统!!!!!!");
+//            return %orig;
+//    }
+//}
+//%end

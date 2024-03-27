@@ -28,11 +28,11 @@
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
 				<key>MonkeyDevDeviceIP</key>
-				<string></string>
+				<string>127.0.0.1</string>
 				<key>MonkeyDevDevicePort</key>
-				<string></string>
+				<string>3333</string>
 				<key>MonkeyDevDevicePassword</key>
-				<string></string>
+				<string>alpine</string>
 				<key>MonkeyDevInstallOnProfiling</key>
 				<string>YES</string>
 				<key>MonkeyDevCopyOnBuild</key>
@@ -73,7 +73,7 @@
 			<key>MonkeyDevPath</key>
 			<string>/opt/MonkeyDev</string>
 			<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-			<string>8.0</string>
+			<string>12.0</string>
 			<key>FRAMEWORK_SEARCH_PATHS</key>
 			<string>$(MonkeyDevPath)/frameworks/** $(MonkeyDevTheosPath)/vendor/lib</string>
 		</dict>
